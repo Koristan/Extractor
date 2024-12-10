@@ -1,0 +1,75 @@
+{% include 'head.html' %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+{% from 'bootstrap5/form.html' import render_form %}
+
+<body class="flex">
+    <div id="users" class="flex">
+        <div class="wrapper">
+            <main id="main" class="users">
+
+                <div class="top-panel">
+                    <form action="" id="create-new-user">
+
+                        <div class="input-holder">
+                            <h5>
+                                Логин
+                            </h5>
+                            <input type="text" name="user_login" placeholder="Логин">
+                        </div>
+
+                        <div class="input-holder">
+                            <h5>
+                                Пароль
+                            </h5>
+                            <input type="text" name="user_password" placeholder="Пароль">
+                        </div>
+
+                        <div class="input-holder">
+                            <h5>
+                                Подтвердите пароль
+                            </h5>
+                            <input type="text" name="user_confirm_password" placeholder="Подтвердите пароль">
+                        </div>
+
+                        <div class="input-holder">
+                            <h5>
+                                Уровень доступа
+                            </h5>
+                            <input type="number" name="user_access" placeholder="Уровень доступа">
+                        </div>
+
+                        <button>
+                            Создать
+                        </button>
+
+                    </form>
+
+                    <form action="" id="delete-user">
+                        <div class="input-holder">
+                            <h5>
+                                Логин
+                            </h5>
+                            <input type="text" name="user_login" placeholder="Логин">
+                        </div>
+
+                        <button>
+                            Удалить
+                        </button>
+                    </form>
+                </div>
+
+                <div class="items">
+
+                </div>
+
+                <a id="reload-user-list-button" class="btn">
+                    Обновить
+                </a>
+
+            </main>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,51 @@
+{% include 'head.html' %}
+<aside id="sidebar" class="site-sidebar">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+
+<body id="all-domains" class="flex">
+    <div class="wrapper">
+        <main id="main" class="domains">
+            <div class="domains_search">
+                <form id="search-domains" class="flex search-form" method="post">
+                    <input type="text" name="search_input" placeholder="Поиск">
+                    
+                    <label for="sort_revert">
+                        <h6>
+                            Сортировка по убыванию
+                        </h6>
+                    </label>
+                    <input type="checkbox" name="sort_revert" id="sort_revert">
+                    
+                    <button type="submit"><svg enable-background="new 0 0 32 32" id="Glyph" version="1.1"
+                            viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z"
+                                id="XMLID_223_" />
+                        </svg>
+                    </button>
+
+                    <h5 class="total-sites">
+
+                    </h5>
+                </form>
+            </div>
+            <div class="domain domain_title flex">
+                <div class="p2">Название сайта</div>
+                <div class="p2">Декодированное название</div>
+                <div class="p2">Есть ли SSL</div>
+                <div class="p2">Версия PHP</div>
+            </div>
+            <div class="domains_view flex">
+                <div class="domain">
+                    <div class="name p2">Название сайта</div>
+                    <div class="decoded_name p2">Декодированное название</div>
+                    <div class="ssl p2">Есть ли SSL</div>
+                    <div class="php p2">Версия PHP</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>

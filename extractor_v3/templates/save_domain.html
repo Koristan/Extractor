@@ -1,0 +1,88 @@
+{% include 'head.html' %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+{% from 'bootstrap5/form.html' import render_form %}
+
+<body class="flex">
+    <div id="add-domains" class="flex">
+        <div class="wrapper">
+            <main id="main" class="domains">
+                <div class="item_title flex">
+                    <h2 class="title">!!! ВНИМАНИЕ, WARNING, ACHTUNG, БАБАСКА, УВАГА !!!</h2>
+                    <!-- <h3 class="s_title">ЕСЛИ ТЫ, РАДУЖНЫЙ ПРОКАЗНИК, НЕ ХОЧЕШЬ ПОПАСТЬ В СПИСОК П РУЧКОЙ <br>ДУБЛИРУЙ ДОМЕН БОЕВОЙ ТОЛЬКО ПОСЛЕ ТОГО КАК ВСТАЛИ РЕСУРСНЫЕ ЗАПИСИ</h3> -->
+                    <!-- <h3 class="s_title">ДОМЕНЫ .РФ ПРОПИСЫВАЕМ РУССКИМИ БУКВАМИ, СИСТЕМА ИХ КОНВЕРТИРУЕТ САМА</h3> -->
+                    <div class="s_title">домены .рф прописываем русскими буквами, система их конвертирует сама</div>
+                    <div>на текущий момент не добавлены проверки у названий доменов <br>если не хочешь все сломать,
+                        копируй домен без <b>"http://", "https://", "/", и прочих символов</b></div>
+                </div>
+                <div class="domains__save">
+                    <h3 class="s_title">Выгрузить сайт!</h3>
+                    <form action="" id="save-domain" class="flex">
+                        <!-- <div class="input-holder"></div> -->
+                        <h5>
+                            Название сайта
+                        </h5>
+                        <input type="text" name="site_name" placeholder="Название сайта">
+                        <div class="form_check">
+                            <input class="form-check-input" id="check1" name="sitetype" type="checkbox" value="1">
+                            <label class="form-check-label" for="check1">Вы уверены, что правильно заполнили название сайта?</label>
+                        </div>
+
+                        <button class="btn">Выгрузить</button>
+
+                        <div class="error=holder">
+
+                        </div>
+                    </form>
+                    <div class="file-holder">
+                    </div>
+                </div>
+                <div class="cat_container hidden">
+                    <div class="cat">
+                        <div class="paw"></div>
+                        <div class="paw"></div>
+                        <div class="shake">
+                            <div class="tail"></div>
+                            <div class="main">
+                                <div class="head"></div>
+                                <div class="body">
+                                    <div class="leg"></div>
+                                </div>
+                                <div class="face">
+                                    <div class="mustache_cont">
+                                        <div class="mustache"></div>
+                                        <div class="mustache"></div>
+                                    </div>
+                                    <div class="mustache_cont">
+                                        <div class="mustache"></div>
+                                        <div class="mustache"></div>
+                                    </div>
+                                    <div class="nose"></div>
+                                    <div class="eye"></div>
+                                    <div class="eye"></div>
+                                    <div class="brow_cont">
+                                        <div class="brow"></div>
+                                        <div class="brow"></div>
+                                    </div>
+                                    <div class="brow_cont">
+                                        <div class="brow"></div>
+                                        <div class="brow"></div>
+                                    </div>
+                                    <div class="ear_l">
+                                        <div class="inner"></div>
+                                    </div>
+                                    <div class="ear_r">
+                                        <div class="outer"></div>
+                                        <div class="inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>

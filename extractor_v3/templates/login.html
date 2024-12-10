@@ -1,0 +1,23 @@
+{% include 'head.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+<body id="login">
+  <div class="container">
+    <div class="login-holder">
+      <form action="" id="login-form">
+
+        <input type="text" placeholder="Логин" name="username">
+        <input type="password" placeholder="Пароль" name="password">
+
+        <button class="btn">Войти</button>
+      </form>
+
+      <button class="btn guest">Войти как гость</button>
+      <p class="error"></p>
+    </div>
+  </div>
+
+  <div class="image">
+    <img src="./../static/img/sosi.jfif" alt="">
+  </div>
+</body>

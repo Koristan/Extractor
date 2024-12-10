@@ -1,0 +1,44 @@
+{% include 'head.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+
+<body class="flex">
+    <div id="add-ftp">
+        <main id="main" class="404 flex">
+            <section class="flex">
+                <h1>Выдать FTP</h1>
+                <form action="" id="form-add-ftp">
+                    <div class="input-holder">
+                        <h5>Название сайта</h5>
+                        <input type="text" name="site_name" placeholder="Название сайта">
+                    </div>
+
+                    <button class="btn">
+                        Выдать
+                    </button>
+                </form>
+
+                <div class="ftp-wrapper">
+                    
+                </div>
+
+            </section>
+            <section class="flex">
+                <h1>Удалить FTP</h1>
+                <form action="" id="form-delete-ftp">
+                    <div class="input-holder">
+                        <h5>Название сайта</h5>
+                        <input type="text" name="site_name" placeholder="Название сайта">
+                    </div>
+
+                    <button class="btn">
+                        Удалить
+                    </button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>

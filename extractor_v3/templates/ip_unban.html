@@ -1,0 +1,19 @@
+{% include 'head.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+<body class="flex">
+    <div id="s-ip">
+        <main id="main" class="404 flex">
+            <h1>{{title}}</h1>
+            {{ render_form(unbanform) }}
+            {{error}}
+            <!-- <div class="form-check">
+                <input class="form-check-input" id="check1" name="sitetype" type="checkbox" value="1">
+                <label class="form-check-label" for="check1">Вы уверены, что хотите удалить выбранный домен</label>
+            </div> -->
+        </main>
+    </div>
+</body>

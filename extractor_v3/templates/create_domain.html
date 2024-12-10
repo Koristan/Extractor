@@ -1,0 +1,159 @@
+{% include 'head.html' %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+{% from 'bootstrap5/form.html' import render_form %}
+
+<body class="flex">
+    <div id="create-domain" class="flex">
+        <div class="wrapper">
+            <main id="main" class="domains">
+                <div class="item_title flex">
+                    <h2 class="title">!!! ВНИМАНИЕ, WARNING, ACHTUNG, БАБАСКА, УВАГА !!!</h2>
+                    <!-- <h3 class="s_title">ЕСЛИ ТЫ, РАДУЖНЫЙ ПРОКАЗНИК, НЕ ХОЧЕШЬ ПОПАСТЬ В СПИСОК П РУЧКОЙ <br>ДУБЛИРУЙ ДОМЕН БОЕВОЙ ТОЛЬКО ПОСЛЕ ТОГО КАК ВСТАЛИ РЕСУРСНЫЕ ЗАПИСИ</h3> -->
+                    <!-- <h3 class="s_title">ДОМЕНЫ .РФ ПРОПИСЫВАЕМ РУССКИМИ БУКВАМИ, СИСТЕМА ИХ КОНВЕРТИРУЕТ САМА</h3> -->
+                    <div class="s_title">домены .рф прописываем русскими буквами, система их конвертирует сама</div>
+                    <div>на текущий момент не добавлены проверки у названий доменов <br>если не хочешь все сломать,
+                        копируй домен без <b>"http://", "https://", "/", и прочих символов</b></div>
+                </div>
+                <div class="domains__duplicator">
+                    <h3 class="s_title">Быстрое создание</h3>
+
+                    <form action="" id="create-form">
+                        <div class="input-holder">
+                            <h5>
+                                Наполнение
+                            </h5>
+                            <div class="forms flex">
+                                <input type="radio" name="sitetype" value="0" id="type-0" checked>
+                                <label for="type-0">Пустой</label>
+                                <input type="radio" name="sitetype" value="1" id="type-1">
+                                <label for="type-1">С WordPress</label>
+                            </div>
+                        </div>
+
+                        <div class="input-holder">
+                            <h5>
+                                Тип сайта
+                            </h5>
+                            <div class="forms flex">
+                                <input type="radio" name="sitewar" value="0" id="config-0" checked>
+                                <label for="config-0">Боевой</label>
+                                <input type="radio" name="sitewar" value="1" id="config-1">
+                                <label for="config-1">Шаблон</label>
+                            </div>
+                        </div>
+
+                        <div class="input-holder">
+                            <h5>
+                                Нужна SSL
+                            </h5>
+                            <div class="forms flex">
+                                <input type="radio" name="withssl" value="0" id="ssl-0" checked>
+                                <label for="ssl-0">С SSL</label>
+                                <input type="radio" name="withssl" value="1" id="ssl-1">
+                                <label for="ssl-1">Без SSL</label>
+                            </div>
+                        </div>
+
+                        <div class="input-holder">
+                            <h5>
+                                Версия APACHE
+                            </h5>
+                            <div class="forms flex">
+                                <input type="radio" name="apache" value="apache2-php8.0" id="apache-0" checked>
+                                <label for="apache-0">Apache 8.0</label>
+
+                                <input type="radio" name="apache" value="apache2-php7.3" id="apache-1">
+                                <label for="apache-1">Apache 7.3</label>
+                            </div>
+                        </div>
+
+                        <div class="input-holder">
+                            <h5>
+                                Название сайта
+                            </h5>
+                            <input type="text" name="site_name" placeholder="Название сайта">
+                        </div>
+
+                        <div class="input-holder">
+                            <h5>
+                                Архив
+                            </h5>
+                            <input id="archive" type="file" name="archive">
+                            <!-- <h6>
+                                Загрузка архива временно не работает :(
+                             </h6> -->
+                        </div>
+
+                        <div class="input-holder hidden">
+                            <h5>
+                                Тип архива
+                            </h5>
+                            <div class="forms flex">
+                                <input type="radio" name="archive-type" value="0" id="archive-type-0" checked>
+                                <label for="archive-type-0">Дубликатор</label>
+                                <input type="radio" name="archive-type" value="1" id="archive-type-1">
+                                <label for="archive-type-1">Экстрактор</label>
+                            </div>
+                        </div>
+
+                        <button class="btn">Начать</button>
+
+                    </form>
+
+                    <div class="form_check">
+                        <input class="form-check-input" id="check1" name="sitetype" type="checkbox" value="1">
+                        <label class="form-check-label" for="check1">Вы уверены, что правильно заполнили все
+                            значения?</label>
+                    </div>
+
+                </div>
+                <div class="cat_container hidden">
+                    <div class="cat">
+                        <div class="paw"></div>
+                        <div class="paw"></div>
+                        <div class="shake">
+                            <div class="tail"></div>
+                            <div class="main">
+                                <div class="head"></div>
+                                <div class="body">
+                                    <div class="leg"></div>
+                                </div>
+                                <div class="face">
+                                    <div class="mustache_cont">
+                                        <div class="mustache"></div>
+                                        <div class="mustache"></div>
+                                    </div>
+                                    <div class="mustache_cont">
+                                        <div class="mustache"></div>
+                                        <div class="mustache"></div>
+                                    </div>
+                                    <div class="nose"></div>
+                                    <div class="eye"></div>
+                                    <div class="eye"></div>
+                                    <div class="brow_cont">
+                                        <div class="brow"></div>
+                                        <div class="brow"></div>
+                                    </div>
+                                    <div class="brow_cont">
+                                        <div class="brow"></div>
+                                        <div class="brow"></div>
+                                    </div>
+                                    <div class="ear_l">
+                                        <div class="inner"></div>
+                                    </div>
+                                    <div class="ear_r">
+                                        <div class="outer"></div>
+                                        <div class="inner"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>

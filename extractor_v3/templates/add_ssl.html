@@ -1,0 +1,76 @@
+{% include 'head.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+
+<body class="flex">
+    <div id="add-ssl">
+        <main id="main" class="404 flex">
+            <section class="flex">
+                <h1>Поставить SSL</h1>
+                <form action="" id="add-ssl-form">
+
+                    <div class="form_holder">
+                        <div class="input-holder">
+                            <!-- <h5>Название сайта</h5> -->
+                            <input type="text" name="site_name" placeholder="Название сайта">
+                        </div>
+
+                        <button class="btn">
+                            Поставить
+                        </button>
+                    </div>
+
+                    <div class="underform_holder">
+                        <div class="input-holder flex">
+                            <input type="checkbox" name="certbot" id="certbot" checked>
+                            <label class="h5" for="certbot">certbot (SSL)</label>
+                        </div>
+
+                        <div class="input-holder flex">
+                            <input type="checkbox" name="wp_cli" id="wp_cli" checked>
+                            <label class="h5" for="wp_cli">WP CLI (Замена ссылок в БД)</label>
+                        </div>
+
+                        <div class="input-holder flex">
+                            <input type="checkbox" name="nginx" id="nginx" checked>
+                            <label class="h5" for="nginx">Замена конфигов</label>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="flex">
+                <h1>Удалить SSL</h1>
+                <form action="" id="delete-ssl-form">
+                    <div class="form_holder">
+                        <div class="input-holder">
+                            <!-- <h5>Название сайта</h5> -->
+                            <input type="text" name="site_name" placeholder="Название сайта">
+                        </div>
+
+                        <button class="btn">
+                            Удалить
+                        </button>
+                    </div>
+                    <div class="underform_holder">
+                        <div class="input-holder flex">
+                            <input type="checkbox" name="certbot-del" id="certbot-del" checked>
+                            <label class="h5" for="certbot-del">certbot (SSL)</label>
+                        </div>
+                        <div class="input-holder flex">
+                            <input type="checkbox" name="wp_cli-del" id="wp_cli-del" checked>
+                            <label class="h5" for="wp_cli-del">WP CLI (Замена ссылок в БД)</label>
+                        </div>
+
+                        <div class="input-holder flex">
+                            <input type="checkbox" name="nginx-del" id="nginx-del" checked>
+                            <label class="h5" for="nginx-del">Замена конфигов</label>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>

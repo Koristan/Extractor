@@ -1,0 +1,104 @@
+{% include 'head.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+
+<body class="flex">
+    <div id="bd-settings">
+        <main id="main" class="items_bd flex">
+            <section class="flex item_bd">
+                <h2>Выгрузить БД</h2>
+                <form action="" id="bd-save-form">
+                    <div class="form_holder">
+                        <div class="input-holder">
+                            <!-- <h5>Название сайта</h5> -->
+                            <input type="text" name="site_name" placeholder="Название сайта">
+                        </div>
+
+                        <button class="btn">
+                            Выгрузить
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="flex item_bd">
+                <h2>Загрузить БД</h2>
+                <form action="" id="bd-load-form">
+                    <div class="form_holder">
+                        <div class="input-holder">
+                            <!-- <h5>Название сайта</h5> -->
+                            <input type="text" name="site_name" placeholder="Название сайта">
+                        </div>
+
+                        <div class="input-holder">
+                            <h5>
+                                База данных
+                            </h5>
+                            <input id="bd_file" type="file" name="bd_file">
+                            <!-- <h6>
+                                Загрузка архива временно не работает :(
+                             </h6> -->
+                        </div>
+
+                        <button class="btn">
+                            Загрузить
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+
+            <section class="flex item_bd">
+                <h2>Поменять ссылки в БД</h2>
+                <form action="" id="bd-replace-form">
+                    <div class="form_holder">
+                        <div class="input-holder">
+                            <input type="text" name="site_name" placeholder="Название сайта">
+                        </div>
+
+                        <div class="input-holder">
+                            <input type="text" name="new_site_name" placeholder="Новое название сайта">
+                            <p>
+                                Оставьте пустым, чтобы не менять ссылку
+                            </p>
+                        </div>
+
+                        <div class="input-holder">
+                            <input id="http_change" type="checkbox" name="http_change">
+                            <label for="http_change">
+                                <h5>Менять с HTTP[] на HTTP[S]</h5>
+                            </label>
+                        </div>
+
+                        <button class="btn">
+                            Загрузить
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+
+            <section class="flex item_bd">
+                <h2>Удалить</h2>
+                <form action="" id="bd-delete-form">
+                    <div class="form_holder">
+                        <div class="input-holder">
+                            <input type="text" name="site_name" placeholder="Название сайта">
+                        </div>
+
+                        <button class="btn delete-user">
+                            Удалить пользователя
+                        </button>
+                        <button class="btn delete-database">
+                            Удалить базу данных
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+        </main>
+    </div>
+</body>

@@ -1,0 +1,143 @@
+{% include 'head.html' %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+{% from 'bootstrap5/form.html' import render_form %}
+
+<body class="flex">
+    <div id="servers">
+        <div class="wrapper">
+            <main class="servers">
+
+                <div class="tabs flex">
+                    <a class="tab btn" tab-id="0">
+                        Мониторинг
+                    </a>
+
+                    <a class="tab btn" tab-id="1">
+                        IP
+                    </a>
+
+                    <a class="tab btn" tab-id="2">
+                        Логика экстрактора
+                    </a>
+                    <a class="tab btn" tab-id="3">
+                        Страницы
+                    </a>
+                </div>
+
+                <div class="panels-holder flex">
+
+                    <div class="panel monitoring panel-id-0">
+                        Инфурмация.
+                    </div>
+
+                    <div class="panel ip_panel hidden panel-id-1">
+                        <form action="" id="ip-ban">
+                            <div class="input-holder">
+                                <h5>
+                                    Забанить/Разбанить IP
+                                </h5>
+                                <div class="forms flex">
+                                    <input type="text" name="ip" placeholder="ip-адресс">
+                                    <a target="_blank" href="#" class="btn check_ip">?</a>
+                                </div>
+                            </div>
+
+                            <button class="btn ban">Забанить</button>
+                            <button class="btn unban">Разбанить</button>
+
+                        </form>
+                    </div>
+
+                    <div class="panel flex parser-panel hidden panel-id-2">
+                        <h5>
+                            Создать/Обновить файл всех доменов
+                        </h5>
+                        <a id="parse-nginx" class="btn">
+                            Начать
+                        </a>
+                        <h5>
+                            Автообновление ssl
+                        </h5>
+                        <a id="parse-ssl" class="btn">
+                            Обновить
+                        </a>
+                        <h5>
+                            Chown
+                        </h5>
+                        <input type="text" id="chown-by-input" name="site_name">
+                        <a id="chown-by" class="btn">
+                            Чавнуть
+                        </a>
+                        <h5>
+                            Reload Server
+                        </h5>
+                        <a id="reload-server" class="btn">
+                            Релоад
+                        </a>
+                        <h5>
+                            HBA server
+                        </h5>
+                        <a id="reset-server" class="btn">
+                            Перезапуск 
+                        </a>
+                        <h5>
+                            MYSQL server
+                        </h5>
+                        <a id="reset-server" class="btn">
+                            Перезапуск 
+                        </a>
+                    </div>
+
+                    <div class="panel pages-panel hidden panel-id-3">
+
+                        <form id="pages-form" action="">
+                            <div class="input-holder">
+                                <h5>
+                                    Панель управления страницами
+                                </h5>
+
+                                <div class="buttons">
+                                    <a id="add-new-page" class="btn">
+                                        Добавить страницу
+                                    </a>
+                                    <input type="text" name="page_name" placeholder="Название страницы">
+                                </div>
+
+                                <div class="page-list">
+
+                                </div>
+
+                                <div class="readctor">
+                                    <div class="name">
+                                        <h4>
+                                            Выберите файл
+                                        </h4>
+                                    </div>
+
+                                    <div class="text">
+                                        <textarea name="redactor_textarea" id="htmeditor"></textarea>
+                                        <script src="https://htmeditor.com/js/htmeditor.min.js"
+                                            htmeditor_textarea="htmeditor" full_screen="no" editor_height="480"
+                                            run_local="no"> </script>
+                                        
+                                    </div>
+
+                                    <a class="save disable">
+                                        Сохранить
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+
+
+            </main>
+        </div>
+    </div>
+</body>

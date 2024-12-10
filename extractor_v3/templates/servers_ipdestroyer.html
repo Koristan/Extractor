@@ -1,0 +1,15 @@
+{% include 'head.html' %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+{% from 'bootstrap5/form.html' import render_form %}
+<body class="flex">
+    <div id="servers">
+        <div class="wrapper">
+            <main class="servers">
+                {{ render_form(ipdestroyer) }}
+            </main>
+        </div>
+    </div>
+</body>

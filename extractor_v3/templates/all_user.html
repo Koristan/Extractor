@@ -1,0 +1,26 @@
+{% include 'head.html' %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+
+<body class="flex">
+    <div class="wrapper">
+        <main id="main" class="all_user">
+            {% for role in roles %}
+            <div class="user flex">
+                <div class="name">
+                    {{role[0]}}
+                </div>
+                <div class="access">
+                    {% if (role[2] == 1) %}
+                    Админ
+                    {% else %}
+                    Не админ
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </main>
+    </div>
+</body>

@@ -1,0 +1,71 @@
+{% include 'head.html' %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+
+<body class="flex">
+    <div id="dashboard">
+        <div class="wrapper">
+            <main id="main" class="dashboard">
+                <h2>Добро пожаловать на панель управления {{ username }} {{ logined_user }}!</h2>
+                <div class="flex dashboard_item">
+                    <strong>ВНИМАНИЕ! Перед посадкой на домен прочти мини-readme</strong>
+                    <div class="items_menu">
+                        <ul class="flex">
+                            <li class="menu_list active" data-id="info">
+                                Как проверить ресурсную запись?
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="items_content">
+                        <div id="info" class="text_list flex active">
+                            <div class="item_text">
+                                <strong>СПИСОК НАШИХ IP</strong><br>
+                                <p>5.23.55.43 - основной ip от прокси, на него откликаются все сайта с серверов, которые находятся в серверной</p><br>
+                                <p>185.119.56.244 - дополнительный ip от облачного сервера рекламы и остальных клиентов на timeweb</p><br>
+                                <p>185.114.247.232 - дополнительный ip от виртуального хостинга для сайтов из библиотеки ОП и SEO на timeweb</p><br>
+                                <p>185.236.66.46 - ip который нам выдает BazaNet, его нельзя указывать как ресурсную запись потому, что на прокси он подменяется 5.23.55.43</p><br>
+                                <p>95.53.130.86 - ip который нам выдает Ростелеком, его нельзя указывать как ресурсную запись потому, что на прокси он подменяется 5.23.55.43</p><br>
+                            </div>
+                            <div class="item_text">
+                                Для того, что бы посадить сайт на боевую ссылку нужно убедиться в том, что у него встали ресурсные записи. О самих записях и способах их установки на разных регистраторах подробно <a class="link bold" target="_blank" href="/maluals">в инструкциях</a>, но о способах их проверки - сейчас.
+                            </div>
+                            <div class="item_text">
+                                Для того, что бы поменять ресурсную запись необходимо перейти на сайт регистратора домена - перейти в нужный домен - настройка DNS - добавить А- запись
+                            </div>
+                            <div class="item_text">
+                                <b>ВАЖНЫЙ МОМЕНТ</b> в настройках DNS, а именно в NS записях не добжно быть упоминания hosting. 
+                                Напримере настроек сайта lksevertrans.ru видно что выбраны NS ns.reg.1 / ns.reg.2. В описание к типу записи сказано что, данный тип записи нужен только для домена (бесплатные DNS сервера). А так как у нас сам хостинг находится на TIMEWEB, то мы пропивываем IP нашего хостинга. <br>Например, ns1.hosting.reg.ru / ns2.hosting.reg.ru нужны только в том случает когда "домен и хостинг клиента"
+                            </div>
+                            <div class="image_m" data-fancybox="./static/img/mx3.jpg" data-src="./static/img/mx3.jpg">
+                                <img src="./static/img/mx3.jpg" alt="">
+                            </div>
+                            <div class="item_text">
+                                Проверить NS-запись можно на сайте <a class="link bold" href="https://mxtoolbox.com/" target="_blank">https://mxtoolbox.com/</a> написав в строке поиска dns:domain или выбрав в выпадающем списке DNS CHECK
+                            </div>
+                            <div class="image_m" data-fancybox="./static/img/mx4.jpg" data-src="./static/img/mx4.jpg">
+                                <img src="./static/img/mx4.jpg" alt="">
+                            </div>
+                            <div class="item_text">
+                                Проверить добавленную запись можно на сайте <a class="link bold" href="https://mxtoolbox.com/" target="_blank">https://mxtoolbox.com/</a> написав в строке поиска a:domain или выбрав в выпадающем списке DNS LOOKUP 
+                            </div>
+                            <div class="image_m" data-fancybox="./static/img/mx1.jpg" data-src="./static/img/mx1.jpg">
+                                <img src="./static/img/mx1.jpg" alt="">
+                            </div>
+                            <div class="item_text">
+                                Если домен "прилинкован" то в ответном сообщении можно увидеть наш IP в графе IP Address. Если там указан наш IP - то все Okay и можно продолжать. Если нет - ждем и проверяем пока не появится наш IP
+                            </div>
+                            <div class="image_m" data-fancybox="./static/img/mx2.jpg" data-src="./static/img/mx2.jpg">
+                                <img src="./static/img/mx2.jpg" alt="">
+                            </div>
+                            <div class="item_text">
+                                Если нужно проверить встали ли NS-записи у регистратора, необходимо в выпадающем списке выбрать тип поиска DNS Check, вместо DNS Lookup 
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>

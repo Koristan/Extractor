@@ -1,0 +1,108 @@
+.flex {
+    display: flex;
+}
+.content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+
+body {
+    gap: 10px;
+    width: 100%;
+}
+header {
+/*    background-color: #333;*/
+    color: #000;
+    padding: 0 20px;
+    max-width: 15%;
+    width: 100%;
+    border: 1px solid;
+    height: 100%;
+}
+main {
+    padding: 0 20px;
+    border: 1px solid;
+    height: 100%;
+    max-width: 80%;
+    width: 100%;
+}
+
+.input-form {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form__radiobuttons {
+    gap: 30px;
+}
+.form__radiobuttons label {
+    gap: 10px;
+    align-items: center;
+}
+
+.form__inputs {
+    gap: 30px;
+}
+
+.input-form input:checked .form__inputs{
+    display: none;
+}
+
+
+/* SIDDE_BAR */
+#siddebar {
+    background-color: #1976d2;
+    background: -webkit-linear-gradient(45deg,#303f9f,#1976d2);
+    background: linear-gradient(45deg,#303f9f,#1976d2);
+}
+#menu {
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+}
+#menu #sub-menu1, 
+#menu #sub-menu2,  
+#menu #sub-menu3 {
+    flex-direction: column;
+    display: none;
+    gap: 10px;
+    transition: all 0.3s ease-in;
+}
+#menu:hover #sub-menu1, 
+#menu:hover #sub-menu2, 
+#menu:hover #sub-menu3 {
+    display: flex;
+    transition: all 0.3s ease-in;
+}
+nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

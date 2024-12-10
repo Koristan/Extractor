@@ -1,0 +1,40 @@
+{% include 'head.html' %}
+<aside id="sidebar" class="site-sidebar flex">
+    {% include 'header.html' %}
+    {% include 'footer.html' %}
+</aside>
+
+<body class="flex">
+    <div class="wrapper">
+        <main id="main" class="add_role">
+
+            <h2>Добро пожаловать, {{ logined_user }}!</h2>
+            <p>Здесь вы можете добавлять новых пользователей.</p>
+            <div class="dashboard__duplicator">
+                <h3 class="dashboard-subtitle">Быстрое дублирование</p>
+
+                    <form class="flex input-form" method="post">
+                        <div class="flex form__inputs">
+                            <input type="text" name="user_name" id="user_name" placeholder="Введите имя пользователя">
+                            <input type="text" name="password" id="password" placeholder="Введите пароль">
+                            <input type="text" name="role" id="role" placeholder="Укажите роль">
+                        </div>
+                        <button class="btn" type="submit">Создать</button>
+                        {{ error }}
+                    </form>
+            </div>
+            <p>{{ content }}</p>
+            <!-- <h2>Добро пожаловать на панель управления!</h2>
+            для того, что бы посадить сайт на боевую ссылку убедись в том, что А-запись или NS-записи ведут к нам
+            проверить можно на https://mxtoolbox.com/
+
+            практически на всех хостингах есть возможность прередать домен через А-запись (IP адрес нашего сервера). из известных регистраторов в который нет такого функционала - <a href="https://www.nic.ru/" target="_blank">nic.ru</a>
+            Если нужно внести изменения в домен на этих хостах - <a href="/manual1">кликай и читай инструкцию</a>
+
+            для того что бы проверить А-запись переходим по <a href="https://mxtoolbox.com/" target="_blank">ссылке</a> и в поле запроса вводим запись формата a:sitename.ru или нажимаем  на выпадающтй список (картинка 1) выбираем там DNS Looking (картинка 2)
+
+            для того что бы проверить NS-запись переходим по <a href="https://mxtoolbox.com/" target="_blank">ссылке</a> и в поле запроса вводим запись формата ns:sitename.ru или нажимаем  на выпадающтй список (картинка 1) выбираем там DNS Check (картинка 3) -->
+
+        </main>
+    </div>
+</body>
